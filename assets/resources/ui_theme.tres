@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://8jfss08rm8bp"]
+
+[ext_resource type="FontFile" uid="uid://ctblentyxtpx1" path="res://assets/fonts/Average/Average-Regular.ttf" id="1_pf241"]
+[ext_resource type="FontFile" uid="uid://45ewdkph3xh2" path="res://assets/fonts/Oswald/static/Oswald-Bold.ttf" id="1_t54nn"]
+[ext_resource type="FontFile" uid="uid://dtiq8glhsxa1j" path="res://assets/fonts/Oswald/static/Oswald-Regular.ttf" id="2_pf241"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s3qd0"]
+
+[resource]
+default_font = ExtResource("1_pf241")
+default_font_size = 41
+MarginContainer/constants/margin_bottom = 30
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 30
+RichTextLabel/font_sizes/bold_font_size = 42
+RichTextLabel/font_sizes/bold_italics_font_size = 42
+RichTextLabel/font_sizes/italics_font_size = 42
+RichTextLabel/font_sizes/mono_font_size = 42
+RichTextLabel/font_sizes/normal_font_size = 42
+RichTextLabel/fonts/normal_font = ExtResource("1_pf241")
+TabContainer/styles/panel = SubResource("StyleBoxEmpty_s3qd0")
+TitleText/base_type = &"RichTextLabel"
+TitleText/font_sizes/bold_font_size = 96
+TitleText/font_sizes/normal_font_size = 96
+TitleText/fonts/bold_font = ExtResource("1_t54nn")
+TitleText/fonts/normal_font = ExtResource("2_pf241")
