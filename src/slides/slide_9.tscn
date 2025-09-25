@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1y1a5ra6h2su"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_7wycf"]
+[ext_resource type="Texture2D" uid="uid://cdyt5cux3g8yk" path="res://assets/images/scenes_1.png" id="2_v7bns"]
+[ext_resource type="Texture2D" uid="uid://blw42qqigcbeg" path="res://assets/images/scenes_2.png" id="3_ea13b"]
+
+[node name="Scenes" instance=ExtResource("1_7wycf")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Scenes"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Nodes have a hierarchy, where some nodes can be children of other nodes, creating a tree structure. A tree of nodes is called a [u]scene[/u], which is an object that can be instantiated into the game world. Scenes can be saved with the file extension [u].tscn[/u].
+
+Things like players, enemies, and collectables are all scenes, but [u]entire levels[/u] are also scenes. Like nodes, scenes can have a hierarchical tree structure."
+metadata/_edit_lock_ = true
+
+[node name="Scenes1" type="Sprite2D" parent="." index="1"]
+position = Vector2(332, 551.00006)
+scale = Vector2(0.6913299, 0.68428016)
+texture = ExtResource("2_v7bns")
+
+[node name="Scenes2" type="Sprite2D" parent="." index="2"]
+position = Vector2(933, 550.99994)
+scale = Vector2(0.5216231, 0.45960456)
+texture = ExtResource("3_ea13b")

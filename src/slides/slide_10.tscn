@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://f7i3jakex5s1"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_ayfjc"]
+[ext_resource type="Texture2D" uid="uid://b4adtikyu1vq" path="res://assets/images/scripts_1.png" id="2_1yfbm"]
+[ext_resource type="Texture2D" uid="uid://b8r5k0mu7cgit" path="res://assets/images/scripts_2.png" id="3_jag0r"]
+[ext_resource type="Texture2D" uid="uid://cwqv3haggutol" path="res://assets/images/scripts_3.png" id="4_7qaix"]
+
+[node name="Scripts" instance=ExtResource("1_ayfjc")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Scripts
+"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Any node can have a [u]script[/u] attached to it, which is a GDScript code file used to define the behavior of the node. They have the file extension [u].gd[/u].
+
+Scripts control most of the interactions between nodes and scenes, and they define custom functionality for a node. A node with a script can reference any child nodes using the $ operator.
+
+Not every node needs a script attached to it, but typically the [u]root node[/u] of a scene will have a script attached to it, which will define the behavior of the whole scene."
+metadata/_edit_lock_ = true
+
+[node name="ImageSpacer" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="Scripts1" type="Sprite2D" parent="." index="1"]
+position = Vector2(1016.09375, 93.34375)
+scale = Vector2(0.6848154, 0.6234206)
+texture = ExtResource("2_1yfbm")
+
+[node name="Scripts2" type="Sprite2D" parent="." index="2"]
+position = Vector2(1017.40625, 278.64066)
+scale = Vector2(0.7330674, 0.67662525)
+texture = ExtResource("3_jag0r")
+
+[node name="Scripts3" type="Sprite2D" parent="." index="3"]
+position = Vector2(1016, 541.4375)
+scale = Vector2(0.63925034, 0.5555321)
+texture = ExtResource("4_7qaix")

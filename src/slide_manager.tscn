@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdf1ngiag5isl"]
+[gd_scene load_steps=14 format=3 uid="uid://cdf1ngiag5isl"]
 
 [ext_resource type="Theme" uid="uid://8jfss08rm8bp" path="res://assets/resources/ui_theme.tres" id="1_djy2d"]
 [ext_resource type="Script" uid="uid://xbo6uwinp56" path="res://src/slide_manager.gd" id="1_dljuy"]
@@ -7,6 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://4nanc2tu2d40" path="res://src/slides/slide_3.tscn" id="5_fgirq"]
 [ext_resource type="PackedScene" uid="uid://dwtvnyrbt66t0" path="res://src/slides/slide_4.tscn" id="6_o2v25"]
 [ext_resource type="PackedScene" uid="uid://b1h2ccn4843e6" path="res://src/slides/slide_5.tscn" id="7_m4ek2"]
+[ext_resource type="PackedScene" uid="uid://b6eqlk0qtsb0k" path="res://src/slides/slide_6.tscn" id="8_l2c18"]
+[ext_resource type="PackedScene" uid="uid://dpadxbxi0ahtm" path="res://src/slides/slide_7.tscn" id="9_tlidq"]
+[ext_resource type="PackedScene" uid="uid://r1ubyegj55hu" path="res://src/slides/slide_8.tscn" id="10_01f1r"]
+[ext_resource type="PackedScene" uid="uid://b1y1a5ra6h2su" path="res://src/slides/slide_9.tscn" id="10_qm8j8"]
+[ext_resource type="PackedScene" uid="uid://f7i3jakex5s1" path="res://src/slides/slide_10.tscn" id="12_3y4j3"]
+[ext_resource type="PackedScene" uid="uid://5r3jucyaq28h" path="res://src/slides/slide_11.tscn" id="13_6hrnm"]
 
 [node name="SlideManager" type="Control"]
 layout_mode = 3
@@ -19,6 +25,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_djy2d")
 script = ExtResource("1_dljuy")
+start_from_beginning = true
 
 [node name="Slides" type="TabContainer" parent="."]
 layout_mode = 1
@@ -27,7 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 2
+current_tab = 10
 tabs_visible = false
 
 [node name="IntroSlide" parent="Slides" instance=ExtResource("3_d5h14")]
@@ -41,6 +48,7 @@ layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="WhyUseGodot" parent="Slides" instance=ExtResource("5_fgirq")]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -53,3 +61,32 @@ metadata/_tab_index = 3
 visible = false
 layout_mode = 2
 metadata/_tab_index = 4
+
+[node name="AssetLibrary" parent="Slides" instance=ExtResource("8_l2c18")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="NodesAndScenes" parent="Slides" instance=ExtResource("9_tlidq")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 6
+
+[node name="Nodes" parent="Slides" instance=ExtResource("10_01f1r")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 7
+
+[node name="Scenes" parent="Slides" instance=ExtResource("10_qm8j8")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 8
+
+[node name="Scripts" parent="Slides" instance=ExtResource("12_3y4j3")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 9
+
+[node name="ObjectsAndInheritance" parent="Slides" instance=ExtResource("13_6hrnm")]
+layout_mode = 2
+metadata/_tab_index = 10

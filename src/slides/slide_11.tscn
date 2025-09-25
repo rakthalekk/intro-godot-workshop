@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://5r3jucyaq28h"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_egm7x"]
+[ext_resource type="Texture2D" uid="uid://b8r5k0mu7cgit" path="res://assets/images/scripts_2.png" id="2_gevxi"]
+
+[node name="ObjectsAndInheritance" instance=ExtResource("1_egm7x")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Objects and Inheritance"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "
+
+
+Godot is fully object-oriented, and nearly [u]everything[/u] in Godot is a Node. For those familiar with Java, [u]Node[/u] is effectively the same as the Object class, as everything in Godot that has behavior inherits from Node.
+
+Specific nodes have [u]chains of inheritance[/u], where a given node has all the behavior and properties of everything in the chain. In the script shown above, the class name Coin is defined for a scene that has an Area2D root node. Coin inherits from Area2D, which inherits from CollisionObject2D.
+
+The full chain is Coin > Area2D > CollisionObject2D > Node2D > CanvasItem > Node.
+"
+
+[node name="Scripts2" type="Sprite2D" parent="." index="1"]
+position = Vector2(886, 131.00002)
+scale = Vector2(0.83156025, 0.7957876)
+texture = ExtResource("2_gevxi")

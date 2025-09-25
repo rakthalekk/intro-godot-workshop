@@ -1,13 +1,16 @@
 extends Control
 
 
+@export var start_from_beginning: bool
+
 
 @onready var slides = $Slides
 
 
 
 func _ready() -> void:
-	slides.current_tab = 0
+	if start_from_beginning:
+		slides.current_tab = 0
 
 
 func _process(_delta: float) -> void:

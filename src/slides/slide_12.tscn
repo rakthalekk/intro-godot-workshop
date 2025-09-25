@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi8hak1s1b70t"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_ajv5g"]
+
+[node name="NodesSummary" instance=ExtResource("1_ajv5g")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "So in summary..."
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/paragraph_separation = 5
+bbcode_enabled = true
+text = "   •   The smallest objects in Godot are called [u]Nodes[/u]
+   •   Nodes can be combined into a tree to form [u]Scenes[/u]
+   •   Scenes can contain both Nodes and [u]other Scenes[/u]
+         •   Ex. A level scene that has a player scene in it
+   •   Nodes can be given [u]Scripts[/u] to define their behavior
+   •   You can save Scenes as [u].tscn[/u] files and Scripts as [u].gd[/u] files
+   •   Any node with a script attached is a [u]custom node[/u] that [u]extends[/u] the original type
+         •   Ex. Coin is a custom node that extends Area2D
+         •   You can explicitly define a class_name at the top of a script
+"
+metadata/_edit_lock_ = true

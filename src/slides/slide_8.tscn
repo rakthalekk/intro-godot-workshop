@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://r1ubyegj55hu"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_1jov2"]
+[ext_resource type="Texture2D" uid="uid://j01ingeksi2i" path="res://assets/images/nodes_1.png" id="2_scayt"]
+[ext_resource type="Texture2D" uid="uid://d1bfdtxytjg4s" path="res://assets/images/nodes_2.png" id="3_ti34w"]
+[ext_resource type="Texture2D" uid="uid://ba4uoo2kcur50" path="res://assets/images/nodes_3.png" id="4_uv1bc"]
+
+[node name="Nodes" instance=ExtResource("1_1jov2")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Nodes
+"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Everything that exists in Godot is made up of [u]nodes[/u]. A node is a small component of a larger scene, and it may be something like a sprite, a collision box, or an animation player.
+
+There are three main categories of nodes: [u]Node2D[/u], [u]Node3D[/u], and [u]Control[/u]. The first two are typically used for 2D and 3D games respectively, while Control is used for UI.
+
+All nodes inherit from the [u]Node[/u] class, and may inherit from others based on their type."
+metadata/_edit_lock_ = true
+
+[node name="Nodes1" type="Sprite2D" parent="." index="1"]
+position = Vector2(173, 558.0001)
+scale = Vector2(0.79977834, 0.87000513)
+texture = ExtResource("2_scayt")
+
+[node name="Nodes2" type="Sprite2D" parent="." index="2"]
+position = Vector2(622.00006, 559.0001)
+scale = Vector2(0.66150093, 0.69013894)
+texture = ExtResource("3_ti34w")
+
+[node name="Nodes3" type="Sprite2D" parent="." index="3"]
+position = Vector2(1089, 560.0001)
+scale = Vector2(0.57663435, 0.68164235)
+texture = ExtResource("4_uv1bc")

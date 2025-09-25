@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6eqlk0qtsb0k"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_rl751"]
+[ext_resource type="Texture2D" uid="uid://cc1wnnm167ggk" path="res://assets/images/asset_library.png" id="2_7y8gx"]
+
+[node name="AssetLibrary" instance=ExtResource("1_rl751")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Asset Library
+"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "The Godot Asset Library has a ton of other projects you can use as templates or to see a demo of how to do something.
+
+Most of these are under the MIT license and are free to use, in particular those made directly by Godot."
+metadata/_edit_lock_ = true
+
+[node name="ImageSpacer" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="AssetLibrary" type="Sprite2D" parent="." index="1"]
+position = Vector2(913, 357)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7y8gx")
