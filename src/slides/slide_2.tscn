@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckdgfey5mrmmg"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_8h7dd"]
+
+[node name="WhatIsGodot" instance=ExtResource("1_8h7dd")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "What is Godot?"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "An open source game engine, originally released in 2014, that has recently grown in popularity as many developers have migrated from Unity.
+
+
+Like Unity, Godot can be used for 2D and 3D games, and it has its own built-in systems for physics, animation, and shaders.
+
+
+Godot’s primarily language is GDScript, a pythonic language built for the engine that works with Godot’s scene structure. Godot also has support for C#, C++, and several community supported languages such as Rust and Swift.
+"

@@ -5,6 +5,12 @@
 
 [node name="IntroSlide" instance=ExtResource("1_fh50c")]
 
+[node name="MarginContainer" parent="." index="0"]
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
 layout_mode = 2
 theme_override_constants/separation = 50

@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwtvnyrbt66t0"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_n4ouy"]
+[ext_resource type="Texture2D" uid="uid://bsbxreo5cspo5" path="res://assets/images/gdevelop.png" id="2_1rqs3"]
+[ext_resource type="Texture2D" uid="uid://cmd0ida0ep4yo" path="res://assets/images/pico8.png" id="3_e68jx"]
+[ext_resource type="Texture2D" uid="uid://bmvq2tpifsknh" path="res://assets/images/love2d.png" id="4_3am75"]
+[ext_resource type="Texture2D" uid="uid://dccx8kqhamlwp" path="res://assets/images/construct.png" id="5_xt0v5"]
+[ext_resource type="Texture2D" uid="uid://d2fr2jg8h651" path="res://assets/images/source.png" id="6_ygtiv"]
+[ext_resource type="Texture2D" uid="uid://b3d5nrq0cd7if" path="res://assets/images/gamemaker.png" id="7_h6jqm"]
+[ext_resource type="Texture2D" uid="uid://blr5f2vs61i8k" path="res://assets/images/scratch.png" id="8_xy34w"]
+[ext_resource type="Texture2D" uid="uid://b0j5wdpbk1qr4" path="res://assets/images/unity.png" id="9_djgo4"]
+[ext_resource type="Texture2D" uid="uid://bmpp687bvqx6y" path="res://assets/images/unreal.png" id="10_pobcr"]
+
+[node name="OtherEngines" instance=ExtResource("1_n4ouy")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Can I still use other engines?"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Absolutely! This workshop will be focused on Godot, but you are free to develop in whatever you wish, whether that’s
+   •   Unity
+   •   Unreal
+   •   GameMaker
+   •   Source
+   •   Scratch
+   •   x86 Assembly Language
+   •   TI-84 Plus Graphing Calculator
+   •   anything else
+"
+metadata/_edit_lock_ = true
+
+[node name="Gdevelop" type="Sprite2D" parent="." index="1"]
+position = Vector2(1110.5, 645.25)
+scale = Vector2(0.5535714, 0.55263174)
+texture = ExtResource("2_1rqs3")
+
+[node name="Pico8" type="Sprite2D" parent="." index="2"]
+position = Vector2(796, 638)
+scale = Vector2(0.44335967, 0.39193684)
+texture = ExtResource("3_e68jx")
+
+[node name="Love2d" type="Sprite2D" parent="." index="3"]
+position = Vector2(1179, 523)
+scale = Vector2(0.56322986, 0.5737579)
+texture = ExtResource("4_3am75")
+
+[node name="Construct" type="Sprite2D" parent="." index="4"]
+position = Vector2(1024, 519.00006)
+scale = Vector2(0.5087995, 0.5039781)
+texture = ExtResource("5_xt0v5")
+
+[node name="Source" type="Sprite2D" parent="." index="5"]
+position = Vector2(794, 551)
+scale = Vector2(0.39117038, 0.39704365)
+texture = ExtResource("6_ygtiv")
+
+[node name="Gamemaker" type="Sprite2D" parent="." index="6"]
+position = Vector2(813.13556, 462.00003)
+scale = Vector2(0.39503142, 0.38803938)
+texture = ExtResource("7_h6jqm")
+
+[node name="Scratch" type="Sprite2D" parent="." index="7"]
+position = Vector2(1184.0001, 334)
+scale = Vector2(0.46802926, 0.47374323)
+texture = ExtResource("8_xy34w")
+
+[node name="Unity" type="Sprite2D" parent="." index="8"]
+position = Vector2(743.00006, 341.99997)
+scale = Vector2(0.6187794, 0.5797158)
+texture = ExtResource("9_djgo4")
+
+[node name="Unreal" type="Sprite2D" parent="." index="9"]
+position = Vector2(970, 336)
+scale = Vector2(0.69821197, 0.72838295)
+texture = ExtResource("10_pobcr")
