@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwibu5sk4qy5a"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_yu15n"]
+[ext_resource type="Texture2D" uid="uid://b2jbiv8wpi5p4" path="res://assets/images/collision_shape_1.png" id="2_qesww"]
+[ext_resource type="Texture2D" uid="uid://b22od0pfd36vc" path="res://assets/images/collision_shape_2.png" id="3_dtexi"]
+[ext_resource type="Texture2D" uid="uid://c0haa8cjus61l" path="res://assets/images/collision_shape_3.png" id="4_rld71"]
+
+[node name="CollisionShape2D" instance=ExtResource("1_yu15n")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "CollisionShape2D"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "The CollisionShape2D node defines the area in which an object collides with other objects. It does not do anything on its own, but any node that extends CollisionObject2D must have a CollisionShape2D as a child, including
+   •   Area2D
+   •   CharacterBody2D
+   •   Rigidbody2D
+   •   StaticBody2D
+
+For more complex shapes, you can also use CollisionPolygon2D, which lets you manually draw all the points for the collider."
+metadata/_edit_lock_ = true
+
+[node name="ImageSpacer" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="CollisionShape1" type="Sprite2D" parent="." index="2"]
+position = Vector2(1121, 122.00009)
+scale = Vector2(0.49999997, 0.4549549)
+texture = ExtResource("2_qesww")
+
+[node name="CollisionShape2" type="Sprite2D" parent="." index="3"]
+position = Vector2(1114, 351.00003)
+scale = Vector2(0.69890517, 0.74352753)
+texture = ExtResource("3_dtexi")
+
+[node name="CollisionShape3" type="Sprite2D" parent="." index="4"]
+position = Vector2(1106, 592)
+scale = Vector2(0.42, 0.41361257)
+texture = ExtResource("4_rld71")

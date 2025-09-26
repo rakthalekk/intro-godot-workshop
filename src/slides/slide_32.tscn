@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dobr056tntmos"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_18arg"]
+[ext_resource type="Texture2D" uid="uid://djr6m43l7weqb" path="res://assets/images/characterbody.png" id="2_bsr0t"]
+
+[node name="CharacterBody2D" instance=ExtResource("1_18arg")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "CharacterBody2D"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "
+For most 2D games, you will want your player and any enemies to be a CharacterBody2D. Character bodies are controlled through code and will detect collisions with other bodies, such as walls, floors, and enemies.
+
+Character bodies are not affected by the built-in physics system, which means their behavior must be controlled by code, but you can more precisely control how they work. Upon attaching a script to a new CharacterBody2D, it has some pre-written code for a 2D platformer character, which you can keep or delete depending on function.
+
+To move a character body, you can set its velocity and call the move_and_slide() function within the _physics_process() loop. Generally, you shouldn’t change the position of a character body manually, as that will ignore the collision system."
+metadata/_edit_lock_ = true
+
+[node name="Characterbody" type="Sprite2D" parent="." index="2"]
+position = Vector2(758.99994, 83.00001)
+scale = Vector2(0.68989563, 0.5996094)
+texture = ExtResource("2_bsr0t")

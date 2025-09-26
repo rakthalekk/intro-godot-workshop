@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp642kdu8282x"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_px01i"]
+
+[node name="Rigidbody2D" instance=ExtResource("1_px01i")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Rigidbody2D"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "A Rigidbody2D is used for any object that uses the built-in physics system. While CharacterBody2D is controlled by setting its velocity, Rigidbody2D is controlled through forces, which interact with the existing physics system.
+
+Unlike character bodies, which are not natively affected by gravity, all rigidbodies are affected by gravity and would immediately fall upon being placed into the world.
+
+Rigidbodies have the benefit of having a lot of functionality out of the box, as physics interactions like falling, stacking, and bouncing are already calculated for you, but you need to be more careful when trying to move a rigidbody through code.
+
+Generally, you shouldn’t manually change the position or linear_velocity of a rigidbody. It’s better to use the apply_force function within the _integrate_forces() loop.
+"
+metadata/_edit_lock_ = true

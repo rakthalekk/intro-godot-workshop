@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5mbty8hjokyy"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_yiybb"]
+
+[node name="StaticBody2D" instance=ExtResource("1_yiybb")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "StaticBody2D and AnimatableBody2D
+"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Compared to the other types of physics bodies, StaticBody2D is fairly straightforward. It is typically used for objects that don’t have dynamic movement, like walls and platforms.
+
+If a StaticBody2D is manually moved, it will not affect the movement of other objects. For objects that should affect the movement of other objects, such as moving platforms and doors, AnimatableBody2D can be used. This allows you to create a moving platform that carries objects with it using an animation, without writing any code at all!
+"
+metadata/_edit_lock_ = true

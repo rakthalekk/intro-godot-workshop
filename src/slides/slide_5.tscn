@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1h2ccn4843e6"]
+[gd_scene load_steps=4 format=3 uid="uid://b1h2ccn4843e6"]
 
 [ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_mnola"]
 [ext_resource type="Texture2D" uid="uid://untdsmeaemlf" path="res://assets/images/platformer_demo_download.png" id="2_5sgoh"]
+[ext_resource type="Script" uid="uid://dvuwqskssiqcq" path="res://src/url_handler.gd" id="3_gt1gm"]
 
 [node name="HowInstall" instance=ExtResource("1_mnola")]
 
@@ -24,7 +25,8 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Godot can be installed from the website, or you can get the latest version through Steam. If you want to use C# instead of GDScript, you can download the .NET version, but we would recommend GDScript for beginners.
+bbcode_enabled = true
+text = "Godot can be installed from [url=https://godotengine.org/download/windows/]the website[/url], or you can get the latest version through Steam. If you want to use C# instead of GDScript, you can download the .NET version, but we would recommend GDScript for beginners.
 
 You can find the sample project in the Asset Library. Search for “2D Platformer Demo” and it should be the first result.
 "
@@ -39,3 +41,8 @@ size_flags_stretch_ratio = 1.1
 position = Vector2(927, 358)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_5sgoh")
+
+[node name="URLHandler" type="Node" parent="." index="3"]
+script = ExtResource("3_gt1gm")
+
+[connection signal="meta_clicked" from="MarginContainer/VBoxContainer/HBoxContainer/RichTextLabel2" to="URLHandler" method="_on_rich_text_label_meta_clicked"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://basxj741wsks6"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_ymmsl"]
+
+[node name="AudioStreamPlayer" instance=ExtResource("1_ymmsl")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "AudioStreamPlayer
+"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "To play audio files, you can use the AudioStreamPlayer node. Any audio that uses this node is non-spatial, often useful for music.
+
+To create spatial sound, you can use the AudioStreamPlayer2D node, which will play that audio in 2D space.
+
+Note that some aspects of the audio being played, such as whether it loops, are tied to the Import Settings of that specific audio file. By default, .wav files do not loop, and .ogg files do.
+"
+metadata/_edit_lock_ = true
+
+[node name="ImageSpacer" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3

@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://d31s2lqj701by"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_mpirx"]
+[ext_resource type="Texture2D" uid="uid://cncg4keqme8xw" path="res://assets/images/area_1.png" id="2_2i3il"]
+
+[node name="Area2D" instance=ExtResource("1_mpirx")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Area2D
+"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "
+The Area2D node is used for any object that does something when overlapped. Objects can move through Area2Ds and will not stop against them, making them useful for things like collectables, projectiles, or “detect” areas (like an enemy’s sight radius).
+
+Area2D can detect when another area or a body (Rigidbody, CharacterBody, or StaticBody) overlaps with it through signals. The Coin class has the body_entered signal connected to it, so it will call the _on_body_entered function when the player overlaps it. The area has a collision mask of 1, so it can only collide with the player.
+
+Areas are not affected by physics and ignore collision when moving, so they are generally not preferred for things like characters, enemies, or anything affected by physics."
+metadata/_edit_lock_ = true
+
+[node name="Area1" type="Sprite2D" parent="." index="2"]
+position = Vector2(640, 89)
+scale = Vector2(0.89168113, 0.8280423)
+texture = ExtResource("2_2i3il")

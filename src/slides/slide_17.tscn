@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_bp05t"]
 [ext_resource type="Texture2D" uid="uid://bdkbcm2sj1dua" path="res://assets/images/inspector.png" id="2_1xg02"]
 [ext_resource type="Texture2D" uid="uid://c602cpoccwggj" path="res://icon.svg" id="2_qh24a"]
-[ext_resource type="Script" uid="uid://wf4fie8xtxij" path="res://src/slides/wow_printer.gd" id="3_jklp3"]
+[ext_resource type="Script" uid="uid://wf4fie8xtxij" path="res://src/wow_printer.gd" id="3_jklp3"]
 
 [sub_resource type="Animation" id="Animation_1xg02"]
 resource_name = "omg_button"

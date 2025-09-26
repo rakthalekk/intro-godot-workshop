@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cdf1ngiag5isl"]
+[gd_scene load_steps=37 format=3 uid="uid://cdf1ngiag5isl"]
 
 [ext_resource type="Theme" uid="uid://8jfss08rm8bp" path="res://assets/resources/ui_theme.tres" id="1_djy2d"]
 [ext_resource type="Script" uid="uid://xbo6uwinp56" path="res://src/slide_manager.gd" id="1_dljuy"]
@@ -26,6 +26,16 @@
 [ext_resource type="PackedScene" uid="uid://h0foyvh4okfs" path="res://src/slides/slide_23.tscn" id="24_3ocgh"]
 [ext_resource type="PackedScene" uid="uid://hqcjteaef1ju" path="res://src/slides/slide_24.tscn" id="25_tegbr"]
 [ext_resource type="PackedScene" uid="uid://bgrcyggidtmn1" path="res://src/slides/slide_25.tscn" id="26_k668d"]
+[ext_resource type="PackedScene" uid="uid://bneik25py61kb" path="res://src/slides/slide_26.tscn" id="27_8qj50"]
+[ext_resource type="PackedScene" uid="uid://cyugunr5jodb4" path="res://src/slides/slide_27.tscn" id="28_jykt5"]
+[ext_resource type="PackedScene" uid="uid://bh8svjhptqpbe" path="res://src/slides/slide_28.tscn" id="29_xfxc8"]
+[ext_resource type="PackedScene" uid="uid://cwibu5sk4qy5a" path="res://src/slides/slide_29.tscn" id="30_6ob50"]
+[ext_resource type="PackedScene" uid="uid://cq5rm0h61hkck" path="res://src/slides/slide_30.tscn" id="31_c6sjn"]
+[ext_resource type="PackedScene" uid="uid://d31s2lqj701by" path="res://src/slides/slide_31.tscn" id="32_fq6at"]
+[ext_resource type="PackedScene" uid="uid://dobr056tntmos" path="res://src/slides/slide_32.tscn" id="33_meb5l"]
+[ext_resource type="PackedScene" uid="uid://bp642kdu8282x" path="res://src/slides/slide_33.tscn" id="34_nb4bi"]
+[ext_resource type="PackedScene" uid="uid://b5mbty8hjokyy" path="res://src/slides/slide_34.tscn" id="35_y4cgl"]
+[ext_resource type="PackedScene" uid="uid://basxj741wsks6" path="res://src/slides/slide_35.tscn" id="36_2i5c1"]
 
 [node name="SlideManager" type="Control"]
 layout_mode = 3
@@ -46,7 +56,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 23
+current_tab = 12
 tabs_visible = false
 
 [node name="IntroSlide" parent="Slides" instance=ExtResource("3_d5h14")]
@@ -110,7 +120,6 @@ layout_mode = 2
 metadata/_tab_index = 11
 
 [node name="NewEditor" parent="Slides" instance=ExtResource("15_eahkl")]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 12
 
@@ -165,5 +174,56 @@ layout_mode = 2
 metadata/_tab_index = 22
 
 [node name="LearnGDScript" parent="Slides" instance=ExtResource("26_k668d")]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 23
+
+[node name="ImportantNodes" parent="Slides" instance=ExtResource("27_8qj50")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 24
+
+[node name="Sprite2D" parent="Slides" instance=ExtResource("28_jykt5")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 25
+
+[node name="AnimationPlayer" parent="Slides" instance=ExtResource("29_xfxc8")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 26
+
+[node name="CollisionShape2D" parent="Slides" instance=ExtResource("30_6ob50")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 27
+
+[node name="CollisionLayers" parent="Slides" instance=ExtResource("31_c6sjn")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 28
+
+[node name="Area2D" parent="Slides" instance=ExtResource("32_fq6at")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 29
+
+[node name="CharacterBody2D" parent="Slides" instance=ExtResource("33_meb5l")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 30
+
+[node name="Rigidbody2D" parent="Slides" instance=ExtResource("34_nb4bi")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 31
+
+[node name="StaticBody2D" parent="Slides" instance=ExtResource("35_y4cgl")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 32
+
+[node name="AudioStreamPlayer" parent="Slides" instance=ExtResource("36_2i5c1")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 33

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_2wt3n"]
 [ext_resource type="Texture2D" uid="uid://c602cpoccwggj" path="res://icon.svg" id="2_bbr2e"]
-[ext_resource type="Script" uid="uid://wf4fie8xtxij" path="res://src/slides/wow_printer.gd" id="3_lsauq"]
+[ext_resource type="Script" uid="uid://wf4fie8xtxij" path="res://src/wow_printer.gd" id="3_lsauq"]
 [ext_resource type="Texture2D" uid="uid://gkq1jwd1cvqq" path="res://assets/images/signals_1.png" id="4_1xc3k"]
 [ext_resource type="Texture2D" uid="uid://dk1dhjsrffd6a" path="res://assets/images/signals_2.png" id="5_mg3mp"]
 
