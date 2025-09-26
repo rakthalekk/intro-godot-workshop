@@ -1,8 +1,134 @@
-[gd_scene load_steps=2 format=3 uid="uid://docaki1cb0c8p"]
+[gd_scene load_steps=7 format=3 uid="uid://docaki1cb0c8p"]
 
 [ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_smxfn"]
+[ext_resource type="Texture2D" uid="uid://c602cpoccwggj" path="res://icon.svg" id="2_candj"]
+[ext_resource type="Script" uid="uid://com53h6e0pj51" path="res://src/game_crasher.gd" id="3_l62kt"]
 
-[node name="Slide" instance=ExtResource("1_smxfn")]
+[sub_resource type="Animation" id="Animation_l62kt"]
+resource_name = "godot_moment"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(643, 516), Vector2(643, 516), Vector2(636, 370)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(6.3664474, 5.6108856)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Icon:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GameCrasher")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"crash_game"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_candj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1080, 525)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Icon:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byfu6"]
+_data = {
+&"RESET": SubResource("Animation_candj"),
+&"godot_moment": SubResource("Animation_l62kt")
+}
+
+[node name="TheEditor" instance=ExtResource("1_smxfn")]
+animations = Array[String](["godot_moment"])
 
 [node name="Title" type="RichTextLabel" parent="MarginContainer" index="0"]
 layout_mode = 2
@@ -11,3 +137,16 @@ text = "The Editor"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_byfu6")
+}
+
+[node name="Icon" type="Sprite2D" parent="." index="2"]
+visible = false
+position = Vector2(1080, 525)
+texture = ExtResource("2_candj")
+
+[node name="GameCrasher" type="Node2D" parent="." index="3"]
+script = ExtResource("3_l62kt")

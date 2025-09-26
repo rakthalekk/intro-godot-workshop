@@ -1,0 +1,146 @@
+[gd_scene load_steps=9 format=3 uid="uid://td10o6ynv1ic"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_2wt3n"]
+[ext_resource type="Texture2D" uid="uid://c602cpoccwggj" path="res://icon.svg" id="2_bbr2e"]
+[ext_resource type="Script" uid="uid://wf4fie8xtxij" path="res://src/slides/wow_printer.gd" id="3_lsauq"]
+[ext_resource type="Texture2D" uid="uid://gkq1jwd1cvqq" path="res://assets/images/signals_1.png" id="4_1xc3k"]
+[ext_resource type="Texture2D" uid="uid://dk1dhjsrffd6a" path="res://assets/images/signals_2.png" id="5_mg3mp"]
+
+[sub_resource type="Animation" id="Animation_08w33"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/Button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/TextureButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bbr2e"]
+resource_name = "omg_buttons"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/Button:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/TextureButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_08w33"]
+_data = {
+&"RESET": SubResource("Animation_08w33"),
+&"omg_buttons": SubResource("Animation_bbr2e")
+}
+
+[node name="Signals" instance=ExtResource("1_2wt3n")]
+animations = Array[String](["omg_buttons"])
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "Signals"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/paragraph_separation = -8
+bbcode_enabled = true
+text = "The other tab next to Inspector, labeled Node, is mainly used for [u]signals[/u].
+
+Signals are messages that nodes can emit when a specific event happens, like a button press. Nodes can connect to the signal to call a function and do something when the signal is emitted.
+
+Button has the signal pressed, which is emitted whenever it the button is clicked. The WowPrinter node is [u]connected[/u] to the signal, and has the function _on_button_pressed that is called when the signal is emitted.
+"
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button!!!"
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="1"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_bbr2e")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ImageSpacer" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_08w33")
+}
+
+[node name="WowPrinter" type="Node2D" parent="." index="2"]
+script = ExtResource("3_lsauq")
+
+[node name="Signals1" type="Sprite2D" parent="." index="3"]
+position = Vector2(1086, 220.00002)
+scale = Vector2(0.86961454, 0.9097421)
+texture = ExtResource("4_1xc3k")
+
+[node name="Signals2" type="Sprite2D" parent="." index="4"]
+position = Vector2(1069, 620)
+scale = Vector2(0.75179857, 0.71564895)
+texture = ExtResource("5_mg3mp")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/Button" to="WowPrinter" method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/TextureButton" to="WowPrinter" method="_on_texture_button_pressed"]

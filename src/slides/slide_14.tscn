@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dltodh8qrdati"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_hvsp2"]
+[ext_resource type="Texture2D" uid="uid://b1obb8ueowkoh" path="res://assets/images/editor_1.png" id="2_6v0lp"]
+
+[node name="NewEditor" instance=ExtResource("1_hvsp2")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "The Editor"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/paragraph_separation = 5
+bbcode_enabled = true
+text = "Most development will take place within the editor, where you can edit [u]scenes[/u] and [u]scripts[/u]. Upon opening a new project, it will look like this:
+"
+metadata/_edit_lock_ = true
+
+[node name="Editor1" type="Sprite2D" parent="." index="2"]
+position = Vector2(629, 464.99997)
+scale = Vector2(0.49755883, 0.49923077)
+texture = ExtResource("2_6v0lp")

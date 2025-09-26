@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cdf1ngiag5isl"]
+[gd_scene load_steps=27 format=3 uid="uid://cdf1ngiag5isl"]
 
 [ext_resource type="Theme" uid="uid://8jfss08rm8bp" path="res://assets/resources/ui_theme.tres" id="1_djy2d"]
 [ext_resource type="Script" uid="uid://xbo6uwinp56" path="res://src/slide_manager.gd" id="1_dljuy"]
@@ -13,6 +13,19 @@
 [ext_resource type="PackedScene" uid="uid://b1y1a5ra6h2su" path="res://src/slides/slide_9.tscn" id="10_qm8j8"]
 [ext_resource type="PackedScene" uid="uid://f7i3jakex5s1" path="res://src/slides/slide_10.tscn" id="12_3y4j3"]
 [ext_resource type="PackedScene" uid="uid://5r3jucyaq28h" path="res://src/slides/slide_11.tscn" id="13_6hrnm"]
+[ext_resource type="PackedScene" uid="uid://docaki1cb0c8p" path="res://src/slides/slide_13.tscn" id="14_uegtt"]
+[ext_resource type="PackedScene" uid="uid://dltodh8qrdati" path="res://src/slides/slide_14.tscn" id="15_eahkl"]
+[ext_resource type="PackedScene" uid="uid://cjaxkxn3lr4h8" path="res://src/slides/slide_15.tscn" id="16_0tfqa"]
+[ext_resource type="PackedScene" uid="uid://1bsl2yvn1uvx" path="res://src/slides/slide_16.tscn" id="17_urh8a"]
+[ext_resource type="PackedScene" uid="uid://bpoyspg2igcsc" path="res://src/slides/slide_17.tscn" id="18_3vt2i"]
+[ext_resource type="PackedScene" uid="uid://td10o6ynv1ic" path="res://src/slides/slide_18.tscn" id="19_uy8r2"]
+[ext_resource type="PackedScene" uid="uid://drla1tllumnhx" path="res://src/slides/slide_19.tscn" id="20_uy8r2"]
+[ext_resource type="PackedScene" uid="uid://cqdsdakorw4x2" path="res://src/slides/slide_20.tscn" id="21_oftlr"]
+[ext_resource type="PackedScene" uid="uid://bwtr766715pav" path="res://src/slides/slide_21.tscn" id="22_tp4vp"]
+[ext_resource type="PackedScene" uid="uid://i38h58812sxe" path="res://src/slides/slide_22.tscn" id="23_nrwfc"]
+[ext_resource type="PackedScene" uid="uid://h0foyvh4okfs" path="res://src/slides/slide_23.tscn" id="24_3ocgh"]
+[ext_resource type="PackedScene" uid="uid://hqcjteaef1ju" path="res://src/slides/slide_24.tscn" id="25_tegbr"]
+[ext_resource type="PackedScene" uid="uid://bgrcyggidtmn1" path="res://src/slides/slide_25.tscn" id="26_k668d"]
 
 [node name="SlideManager" type="Control"]
 layout_mode = 3
@@ -25,7 +38,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_djy2d")
 script = ExtResource("1_dljuy")
-start_from_beginning = true
 
 [node name="Slides" type="TabContainer" parent="."]
 layout_mode = 1
@@ -34,7 +46,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 10
+current_tab = 23
 tabs_visible = false
 
 [node name="IntroSlide" parent="Slides" instance=ExtResource("3_d5h14")]
@@ -88,5 +100,70 @@ layout_mode = 2
 metadata/_tab_index = 9
 
 [node name="ObjectsAndInheritance" parent="Slides" instance=ExtResource("13_6hrnm")]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 10
+
+[node name="TheEditor" parent="Slides" instance=ExtResource("14_uegtt")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 11
+
+[node name="NewEditor" parent="Slides" instance=ExtResource("15_eahkl")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 12
+
+[node name="EditorPerspectives" parent="Slides" instance=ExtResource("16_0tfqa")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 13
+
+[node name="EditorNavigation" parent="Slides" instance=ExtResource("17_urh8a")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 14
+
+[node name="Inspector" parent="Slides" instance=ExtResource("18_3vt2i")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 15
+
+[node name="Signals" parent="Slides" instance=ExtResource("19_uy8r2")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 16
+
+[node name="Resources" parent="Slides" instance=ExtResource("20_uy8r2")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 17
+
+[node name="FileSystem" parent="Slides" instance=ExtResource("21_oftlr")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 18
+
+[node name="BottomPanel" parent="Slides" instance=ExtResource("22_tp4vp")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 19
+
+[node name="Scripting" parent="Slides" instance=ExtResource("23_nrwfc")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 20
+
+[node name="GDScript" parent="Slides" instance=ExtResource("24_3ocgh")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 21
+
+[node name="BuiltInFunctions" parent="Slides" instance=ExtResource("25_tegbr")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 22
+
+[node name="LearnGDScript" parent="Slides" instance=ExtResource("26_k668d")]
+layout_mode = 2
+metadata/_tab_index = 23

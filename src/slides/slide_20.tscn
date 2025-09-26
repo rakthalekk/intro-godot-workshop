@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqdsdakorw4x2"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_46wk5"]
+[ext_resource type="Texture2D" uid="uid://b48apmlviy352" path="res://assets/images/file_system.png" id="2_xy55m"]
+
+[node name="FileSystem" instance=ExtResource("1_46wk5")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "File System"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "The [u]FileSystem[/u] is in the lower left corner of the screen, and it contains all code files, scenes, and other assets.
+
+Since a Godot project only starts with the project.godot file and the Godot icon image, there is no standard way that files should be organized. It’s typically up to the user to create folders in a way that makes sense for their project.
+
+My personal preference is to split up assets and code files into two main folders ([u]assets[/u] and [u]src[/u]), and then create subfolders based on function ([u]entities[/u], [u]world[/u], [u]items[/u], etc.)."
+metadata/_edit_lock_ = true
+
+[node name="ImageSpacer" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+
+[node name="FileSystem" type="Sprite2D" parent="." index="2"]
+position = Vector2(1079, 359)
+texture = ExtResource("2_xy55m")

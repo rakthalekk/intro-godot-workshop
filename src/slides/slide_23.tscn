@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://h0foyvh4okfs"]
+
+[ext_resource type="PackedScene" uid="uid://cj7qg023wmgrg" path="res://src/slides/slide.tscn" id="1_ekd3y"]
+[ext_resource type="Texture2D" uid="uid://cfyp60myec6ak" path="res://assets/images/gdscript.png" id="2_dyyds"]
+
+[node name="GDScript" instance=ExtResource("1_ekd3y")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+theme_type_variation = &"SlideHeader"
+text = "GDScript"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[u]GDScript[/u] is a pythonic language, so the syntax should be very familiar to anyone who has coded in Python. Notably, GDScript is [u]dynamically typed[/u], meaning that variable types are assigned during runtime, and you don’t have to specify a type.
+"
+metadata/_edit_lock_ = true
+
+[node name="Gdscript" type="Sprite2D" parent="." index="2"]
+position = Vector2(641, 478)
+scale = Vector2(0.6248846, 0.61396533)
+texture = ExtResource("2_dyyds")
